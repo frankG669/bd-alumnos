@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <section class="sie">
+            <p>Sistema de Información Escolar</p>
+        </section>
+        <section class="nav">
+            <p id="alta" onclick="abrirModal()">Dar de alta</p>
+            <p>Gestionar calificaciones</p>
+            <p>Grupos</p>
+        </section>
+    </header>
+    <main>
+        <section class="cuadro-busqueda">
+            <input class="buscar" type="search" placeholder="ingresa un Alumno...">
+            <img class="lupa" src="./icons/search.svg" alt="Lupa">
+        </section>
+        <dialog id="modal-box">
+            <h3>Ingresa los datos del alumno:</h3>
+            <form id="alta-alumnos" action="">
+                <input id="nombre" class="alta-alumno" type="text" placeholder="Nombre(s) del alumno" required><br>
+                <input id="apellidoPat" class="alta-alumno" type="text" placeholder="Apellido paterno" required><br>
+                <input id="apellidoMat" class="alta-alumno" type="text" placeholder="Apellido materno" required><br>
+                <input id="edad" class="alta-alumno" type="number" placeholder="Edad" required><br>
+                <section class="botones">
+                    <input class="btn-alta" type="submit" value="Dar de alta">
+                    <input onclick="cerrarModal()" class="btn-cerrar" type="button" value="Cerrar">
+                </section>
+            </form>
+        </dialog>
+    </main>
+    <footer>
+        <section class="part1">
+            <p>Sistema de Información Escolar</p>
+        </section>
+        <section class="part2">
+            Derechos reservados
+        </section>
+    </footer>
+    <script src="./scripts/alumnos.js"></script>
+    <script src="./scripts/alta-alumno.js"></script>
+</body>
+</html>
